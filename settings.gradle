@@ -1,0 +1,5 @@
+include ':root'
+include ':bar'
+include ':foo'
+
+rootProject.name='kotlin_internal'

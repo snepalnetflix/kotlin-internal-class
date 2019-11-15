@@ -1,0 +1,98 @@
+# Directories
+
+**/dist/
+!**/sdk-scripts-gradle/build/
+**/build/*
+!**/build/api-sdk
+NetflixApp/libs/
+NetflixApp/obj/
+NetflixApp/classlib/google-gson-2.2.2/build/
+**/.metadata/
+**/venv/
+
+analysisScripts/chucknorris/node_modules
+
+apiScripts/samples/
+apiScripts/javadoc/
+**/output/
+
+tests/performance/node_modules/
+tests/performance/.vscode/
+
+**/.gradle/
+**/.idea/
+
+# Root directories
+/captures/
+/gen/
+/target/
+
+# Files
+*.iml
+.DS_Store
+.*.swp
+
+# Files names, multiple copies
+
+local.properties
+.settings
+.gitignore
+.gitmodules
+
+# Specific files
+
+NetflixApp/AndroidManifest.xml
+NetflixApp/assets/ca.pem
+NetflixApp/ndk.log
+NetflixApp/jni/.lastbuild.tmp
+NetflixApp/jni/nativePlayer/libnetflixapp/include/Version.h
+NetflixAndroidTest/assets/commandList.txt
+NetflixApp/mapping.txt
+NetflixApp/seeds.txt
+NetflixApp/unused.txt
+NetflixApp/res/raw/voip.pem
+NetflixApp/assets/cs.dat
+NetflixApp/endpoint.hash
+NetflixApp/src/androidTest/AndroidManifest.xml
+NetflixApp/src/androidTest/assets/commandList.txt
+NetflixApp/src/androidTest/assets/overrides.txt
+NetflixLibraries/storage/schemas/com.netflix.mediaclient.storage.db.OfflineDatabase/*.json
+
+# For Aim Low
+perfScripts/perf_dump.txt
+
+# From replaceregexp ant tasks
+
+NetflixApp/jni/mediaPlayer/src/netflix/libnrd-android/include/Version.h
+NetflixApp/src/com/netflix/mediaclient/Build.java
+netflix-release.keystore
+versionFile.txt
+
+gradle-user-home
+
+# Metatron decrypted secrets
+**/metatron/decrypted
+
+# endpoint ignore
+apiScripts/node_modules/*
+
+# python compiled bytecode
+*.pyc
+
+# gradle profiler
+gradle-profiler/profile-out*
+
+# for MDX native build
+.externalNativeBuild
+
+# all node_modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker related
+Dockerfile.*
+_Dockerfile*

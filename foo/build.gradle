@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation kotlin_stdlib
+    implementation "androidx.appcompat:appcompat:$androidx.appcompat"
+    implementation "androidx.core:core-ktx:$androidx.corektx"
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation "androidx.test:runner:$androidxTest.runner"
+    androidTestImplementation("androidx.test.espresso:espresso-core:$androidxTest.espresso", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation "androidx.test:core:$androidxTest.core"
+    testImplementation "androidx.test.ext:junit-ktx:$androidxTest.junit"
+    testImplementation "org.robolectric:robolectric:$robolectric.main"
+
+    testImplementation project(":bar")
+}
